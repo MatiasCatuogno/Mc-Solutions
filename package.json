@@ -1,0 +1,21 @@
+{
+ "version": "1.0.0",
+ "name": "mc-solutions",
+ "author": "Matias Ezequiel Catuogno",
+ "description": "MC-Solutions: Nos especializamos en todo ambiente tecnológico, desde Software y Hardware. Hasta reparaciones de equipos y creación de sitios web modernos y escalables.",
+ "license": "ISC",
+ "main": "index.js",
+ "keywords": [
+  "mcsolutions",
+  "MCSOLUTIONS",
+  "mc-solutions",
+  "MC-SOLUTIONS",
+  "computacion",
+  "boulogne",
+  "computacion",
+  "tecnologia"
+ ],
+ "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1"
+ }
+}

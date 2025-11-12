@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Metadatos básicos -->
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="format-detection" content="telephone=no" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Título y descripción (SEO) -->
+ <title>MC-Solutions</title>
+ <meta name="description" content="MC-Solutions: Nos especializamos en todo ambiente tecnológico, desde Software y Hardware. Hasta reparaciones de equipos y creación de sitios web modernos y escalables." />
+ <meta name="keywords" content="M.C. Solutions, computacion boulogne, mc solutions boulogne, boulogne computacion, boulogne reparacion de pc, soluciones informaticas boulogne, bouglone soluciones informaticas" />
+ <meta name="author" content="Matias Ezequiel Catuogno" />
+ <meta name="robots" content="index, follow" />
+<!-- Indexación y canonical -->
+ <link rel="canonical" href="https://www.mc-solutions.com.ar" />
+ <link rel="alternate" hreflang="es-AR" href="https://www.mc-solutions.com.ar" />
+ <link rel="alternate" hreflang="x-default" href="https://www.mc-solutions.com.ar" />
+ <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+<!-- FavIcon y Apple Touch Icon -->
+ <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+ <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+ <link rel="apple-touch-icon" href="assets/icon/logo_1_64x64.webp" />
+<!-- Conexiónes Tempranas -->
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- Preload de imagen crítica -->
+ <link rel="preload" as="image" href="./assets/img/servicio-tecnico.webp" />
+ <link rel="preload" as="image" href="./assets/img/soporte-tecnico.webp" />
+ <link rel="preload" as="image" href="./assets/img/venta-equipos.webp" />
+<!-- Manifest PWA -->
+ <link rel="manifest" href="./site.webmanifest" />
+<!-- Preloads de fuentes para mejorar el rendimiento -->
+ <link rel="preload" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+ <noscript><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet"></noscript>
+<!-- Iconos (lazy-load no bloqueante) -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" media="print" onload="this.onload=null;this.media='all'" />
+ <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></noscript>
+<!-- CSS Crítico Inline -->
+ <style>*{margin:0px;padding:0px;box-sizing:border-box;cursor:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAA/NJREFUSEutlH9MlHUcx1/Pc7+5JBWzABcmQ7gR+oesFbW1lbnRKoetLdj6g1ouB9RGTSPPYdgpysaWupgzUsp5jaBUkBMkUXJDVs4gzMZyGsZBJ6hQAg/3PPe078Hxw0SO6vvPPbfvZ5/X5/3+fj4fCZCBGGAe0A0M8j8eCVjy/Bq5LiZaTvI0aEe7e/QOoAs4Atz8rywBcKzPNrZt32o23bipMzICX32jDm3b6RdqhoFDQMm/BQnA/bHRUnmTx/pyQrxwa/J0e3WKS0dpag4woug9Pb36tqEhmoHbwO+AOhtYAMQpbD9n25qSPAkQSn7pDLA0TgqqGhjUqfVo3BrQ6bgUuFrfqFUPDwctbAG+A/x3g4UAb2zZZNpd5DRHhILyC0ZJSlrFvPnpZGS8gqYN49z8DqWuCwgrfdd1AdMLXaP9jU2B67rODaAAOAvooTwhwAKgVf/TntDXr1PfqPHzry/g2lFFamoqXq+XyspK0tLSaKy1s+YZw2SxgbHPtosaziI/V37TGRzQz/f49E2qSnMIIGLauy7ZUnr/gPPtK3krTyiH6upqMjMzSUxMxOPxULJ9GR/vMo9lFcn/Au4br3kUsMHJUxrvfaD0tV/Un5gK2Pj2BuPOwgIzflM9Dz701ESVDQ0NZGVlkZOTw+L5xeS8aRq76wPsgAWCBonfCDjgVnm/UPnE5yN/KoBkh6yfOGIlKvYHbHbHP97s8uVOTtamEL1YZm2aAaIAbXxaFoGigPtLlexc5RiQITROA8Qvk7x11dboh5efwxqxYhqgs7OTsj0ZrH/tCjGREhEPSJiEkHGLFD+Uf+7HtUst8/YGcscNZBrAZiP3oy3mPVe709i9t2kCICqv+Xodr67rIuK2xmfHVB5JkFibagx6TiQcPKSy+UO/SJ4PjNzZRaH/yc6Npo4ip5lTZzRqT2gkxEtoAVi1QmZ5lMwto46r2B+043CFBaUf3DUq2XmTtkyVPk0BsDTjRcPp/XstcVELJ69qjms8myrzaZXKhbYA+3ZYMC+AmWy5F8Bot1P8/Rnbu47EKWujH7RIaG7R2L9P5fAXluAOnsmWewHEnbPlW2vR448ZpGCfi2UgWGKZi++FoAyC+7hK9oa72zIbYHX6c7K7rsq2aGKIQiCRXIXyCj+ukundMtPSu/MNRJxJlmjTfHYHYmBF9WKgxDIxhGfLbArE/dmfWq1PPppkGJtQKyhGcFeFZ0s4gKdfSjecPlphDY6/aMnyg35cpeHZEg5ASnbIgY5WG2IUw+mWubxBMHZJrPTjgTLLymvdOq+H0S1zBhiNrE5Oktw9Pr3S5yMvtFtmSjRngOgmIA64BihzTRyK/xs5FLZY01aUsgAAAABJRU5ErkJggg==) 1 1, auto;}body{transition:.5s;background-color:white;font-family:'Be Vietnam Pro',sans-serif;}body.blackmode{background-color:#252525;}body::-webkit-scrollbar{background-color:grey;border:1px solid black;}body::-webkit-scrollbar-thumb{border-radius:50px;background:#4672fe;}body::-webkit-scrollbar-track{border-radius:50px;background:#e1e1e1;}body::-webkit-scrollbar-thumb:hover{background:orange;}ul{list-style:none;}a{text-decoration:none;}</style>
+<!-- Skip link visible on focus -->
+ <style>.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}.skip-link:focus{position:static;width:auto;height:auto;padding:8px;background:#000;color:#fff;z-index:9999}</style>
+<!-- Custom Css-->
+ <link rel="stylesheet" href="style.css" type="text/css" as="style" />
+<!-- Mobile Metas -->
+ <meta name="mobile-web-app-capable" content="yes">
+ <meta name="theme-color" content="#ffa500" /> <!-- CAMBIAR COLORES -->
+ <meta name="msapplication-TileColor" content="#ffa500" /> <!-- CAMBIAR COLORES -->
+ <meta name="msapplication-config" content="browserconfig.xml" />
+ <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<!-- Open Graph -->
+ <meta property="og:type" content="website" />
+ <meta property="og:locale" content="es_AR" />
+ <meta property="og:title" content="MC-Solutions" />
+ <meta property="og:image:width" content="1200" />
+ <meta property="og:image:height" content="630" />
+ <meta property="og:site_name" content="MC-Solutions" />
+ <meta property="og:url" content="https://www.mc-solutions.com.ar" />
+ <meta property="og:image" content="https://www.mc-solutions.com.ar/assets/icon/logo3.webp" />
+ <meta property="og:image:alt" content="Armado y Reparación de PC, Soporte Técnico, Desarrollo Web Full-Stack y Acesoramiento Tecnológico General" />
+ <meta property="og:description" content="MC-Solutions: Nos especializamos en todo ambiente tecnológico, desde Software y Hardware. Hasta reparaciones de equipos y creación de sitios web modernos y escalables." />
+<!-- Twitter Cards -->
+ <meta name="twitter:site" content="@TuCuentaTwitter" />
+ <meta name="twitter:card" content="summary_large_image" />
+ <meta name="twitter:title" content="MC-Solutions" />
+ <meta name="twitter:description" content="MC-Solutions: Nos especializamos en todo ambiente tecnológico, desde Software y Hardware. Hasta reparaciones de equipos y creación de sitios web modernos y escalables." />
+ <meta name="twitter:image" content="https://www.mc-solutions.com.ar/assets/icon/logo3.webp" />
+</head>
+<body id="body">
+<!-- Skip link para accesibilidad -->
+ <a href="#main" class="skip-link">Ir al contenido</a>
+<!-- Header -->
+ <header class="header">
+  <div class="menu-btn" id="menu-btn" role="button" aria-controls="primary-nav" aria-expanded="false" tabindex="0" aria-label="Abrir menú">
+   <span class="top-bun"></span>
+   <span class="stuffing"></span>
+   <span class="bottom-bun"></span>
+   <nav class="nav-bar" id="primary-nav" role="navigation" aria-label="Menú principal">
+    <ul class="nav-bar-ul">
+     <li class="nav-bar-li black-letters">
+      <a href="index.html" class="nav-bar-a black-letters">
+       <i class="fas fa-home" aria-hidden="true"></i>Inicio
+      </a>
+     </li>
+     <li class="nav-bar-li black-letters">
+      <a href="#nosotros" class="nav-bar-a black-letters">
+       <i class="fas fa-user" aria-hidden="true"></i>Nosotros
+      </a>
+     </li>
+     <li class="nav-bar-li">
+      <a href="#servicios" class="nav-bar-a black-letters">
+       <i class="fa-solid fa-wrench" aria-hidden="true"></i>Servicios
+      </a>
+     </li>
+     <li class="nav-bar-li">
+      <a href="#formulario" class="nav-bar-a black-letters">
+       <i class="fa-solid fa-envelope" aria-hidden="true"></i>Contacto
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </div>
+ </header>
+<!-- Dark Mode Boton -->
+ <label for="blackmode" id="toggler" class="toggler" aria-hidden="false">
+  <input type="checkbox" id="blackmode" aria-label="Alternar modo oscuro">
+  <span class="ball" aria-hidden="true"></span>
+  <i class="fa-sharp fa-solid fa-sun sun active" aria-hidden="true"></i>
+  <i class="fa-sharp fa-solid fa-moon moon" aria-hidden="true"></i>
+ </label>
+<!-- Main Seccion -->
+ <main id="main" tabindex="-1">
+  <section>
+   <div class="main-section-div">
+    <img src="./assets/icon/logo3.webp" alt="logo" width="510" height="272" class="img-logo-main" fetchpriority="high" loading="eager" />
+    <img src="./assets/icon/logo2.webp" alt="logo" width="510" height="272" class="img-logo-main-dark" fetchpriority="high" loading="eager" />
+    <span class="main-section-span">Soluciones Inform&aacute;ticas - Boulogne Sur Mer - Zona Norte - Buenos Aires</span>
+    <span class="main-section-span-2">Soluciones Inform&aacute;ticas - Boulogne Sur Mer<br>Zona Norte - Buenos Aires</span>
+   </div>
+  </section>
+<!-- Primera Seccion -->
+  <div class="section-section-color">
+   <section class="section-section">
+    <h1 id="nosotros" class="section-h1-1">¿Qui&eacute;n Soy?</h1>
+    <article class="article1-section1">
+    <p class="article1-section1-p1">Soy M.C. Solutions</p>
+    <p class="article1-section1-p1">
+     Me especializo en todo ambiente tecnol&oacute;gico, desde Software hasta Hardware;
+    <br>Reparaci&oacute;n de equipos y creaci&oacute;n de diseños digitales as&iacute; como Desarrollo Web Full-Stack.<br>
+     Cuento con las mejores herramientas para la realizaci&oacute;n &oacute;ptima del trabajo solicitado.
+    </p>
+    <p class="article1-section1-p1-2">
+     Me especializo en todo ambiente<br>tecnol&oacute;gico desde Software hasta Hardware;
+    <br>Reparaci&oacute;n de equipos y creaci&oacute;n de diseños<br>digitales as&iacute; como Desarrollo Web Full-Stack.<br>
+     Cuento con las mejores herramientas para la<br>realizaci&oacute;n &oacute;ptima del trabajo solicitado.
+    </p>
+    <div class="div-iconos">
+     <ul class="ul-iconos">
+      <li class="li-iconos">
+       <img src="./assets/img/transparencia.webp" alt="Transparencia" title="Transparencia" width="272" height="272" class="img-transparencia" loading="lazy" />
+       <p class="ul-li-p">Transparencia</p>
+      </li>
+      <li class="li-iconos">
+       <img src="./assets/img/cumplimiento.webp" alt="Cumplimiento" title="Cumplimiento" width="272" height="272" class="img-cumplimiento" loading="lazy" />
+       <p class="ul-li-p">Cumplimiento</p>
+      </li>
+      <li class="li-iconos">
+       <img src="./assets/img/compromiso.webp" alt="Compromiso" title="Compromiso" width="272" height="272" class="img-compromiso" loading="lazy" />
+       <p class="ul-li-p">Compromiso</p>
+      </li>
+     </ul>
+    </div>
+    <p class="article1-section1-p2">Se brinda la mejor atenci&oacute;n personalizada al cliente, para una soluci&oacute;n adecuada a cada inconveniente presentado.</p>
+    <p class="article1-section1-p2-2">Se brinda la mejor atenci&oacute;n personalizada al cliente,<br>para una soluci&oacute;n adecuada a cada inconveniente presentado.</p>
+    </article>
+    <h2 id="servicios" class="section-h2">Nuestros Servicios</h2>
+   </section>
+  </div>
+<!-- Segunda Seccion -->
+  <section class="change-color black-letters">
+   <article class="article-section2">
+    <div class="article-div-textos-i">
+     <h2 class="article-div-textos-h2">Servicio T&eacute;cnico</h2>
+     <p class="article-div-textos-p">
+      Instalaci&oacute;n de Drivers, Antivirus & Paquete Office.
+      Adem&aacute;s hago Back Up de tu informaci&oacute;n (Archivos, Documentos, Fotos, M&uacute;sica, Videos) antes de realizar un trabajo por cuestiones de seguridad.
+      Limpieza de gabinetes e interiores de notebooks y cambio de pasta t&eacute;rmica.
+     </p>
+    </div>
+    <img src="./assets/img/servicio-tecnico.webp" alt="Servicio Técnico" title="Servicio Técnico" class="img-logo-servicio-tecnico" width="679" height="382" fetchpriority="high" loading="eager" />
+   </article>
+   <article class="article-section2">
+    <img src="./assets/img/soporte-tecnico.webp" alt="Soporte Técnico" title="Soporte Técnico" class="img-logo-soporte" width="340" height="401" fetchpriority="high" loading="eager" />
+    <div class="article-div-textos">
+     <h2 class="article-div-textos-h2">Soporte T&eacute;cnico</h2>
+     <p class="article-div-textos-p">Se brinda soporte t&eacute;cnico presencial y online a traves de una aplicaci&oacute;n para resolver problemas y fallas. Desde detecci&oacute;n, resoluci&oacute;n, asesoramiento, consultas y configuraci&oacute;n e instalaci&oacute;n de impresoras.</p>
+     <p class="article-div-textos-p">Optimizaci&oacute;n de pc y configuraci&oacute;n de OBS para una mejor calidad y rendimiento en tus streams/videos/grabaciones, adem&aacute;s de asesoramiento t&eacute;cnico para creadores de contenido.</p>
+    </div>
+   </article>
+   <article class="article-section2">
+    <div class="article-div-textos-i">
+     <h2 class="article-div-textos-h2">Venta de equipos</h2>
+     <p class="article-div-textos-p">Venta de equipos armados de acuerdo a la necesidad y uso espec&iacute;fico. Estas pueden ser&#58; Diseño, Edici&oacute;n de Video, Sonido, Streaming, Uso Hogareño.</p>
+     <p class="article-div-textos-p">Venta de notebook se brinda asesoramiento dependiendo tambi&eacute;n de las aplicaciones a correr y el sistema operativo a utilizar, teniendo en cuenta si es necesario movimiento, rendimiento y comodidad.</p>
+    </div>
+    <img src="./assets/img/venta-equipos.webp" alt="Venta de Equipos" title="Venta de Equipos" class="img-logo-pc" width="337" height="337" fetchpriority="high" loading="eager" />
+   </article>
+  </section>
+<!-- Slider De Logos -->
+  <hr class="hr black-letters">
+   <div class="color-de-fondo-slider-logos">
+    <div class="slider-logos-div">
+     <ul class="ul-slider">
+      <li class="li-slider">
+       <img src="./assets/img/intel.webp" alt="intel-logo" title="intel-logo" class="logos-slider" width="230" height="150" loading="lazy" />
+      </li>
+      <li class="li-slider">
+       <img src="./assets/img/amd.webp" alt="amd-logo" title="amd-logo" class="logos-slider" width="230" height="55" loading="lazy" />
+      </li>
+      <li class="li-slider">
+       <img src="./assets/img/hp.webp" alt="hp-logo" title="hp-logo" class="logos-slider" width="230" height="150" loading="lazy" />
+      </li>
+      <li class="li-slider">
+       <img src="./assets/img/kingston.webp" alt="kingston-logo" title="kingston-logo" class="logos-slider" width="230" height="47" loading="lazy" />
+      </li>
+      <li class="li-slider">
+       <img src="./assets/img/nvidia.webp" alt="nvidia-logo" title="nvidia-logo" class="logos-slider" width="230" height="42" loading="lazy" />
+      </li>
+      <li class="li-slider">
+       <img src="./assets/img/dell.webp" alt="dell-logo" title="dell-logo" class="logos-slider" width="230" height="150" loading="lazy" />
+      </li>
+      <li class="li-slider">
+       <img src="./assets/img/msi.webp" alt="msi-logo" title="msi-logo" class="logos-slider" width="230" height="74" loading="lazy" />
+      </li>
+      <li class="li-slider">
+       <img src="./assets/img/asus.webp" alt="asus-logo" title="asus-logo" class="logos-slider" width="230" height="49" loading="lazy" />
+      </li>
+      <li class="li-slider">
+       <img src="./assets/img/lenovo.webp" alt="lenovo-logo" title="lenovo-logo" class="logos-slider" width="230" height="102" loading="lazy" />
+      </li>
+     </ul>
+    </div>
+   </div>
+  <hr class="hr black-letters">
+<!-- Seccion De Reseñas -->
+  <h3 class="section-facebook-h3 black-letters">
+   <a rel="noopener" href="https://www.facebook.com/M.C.InformaticSolutions/reviews" alt="Facebook" title="Facebook" class="section-facebook-h3 black-letters" aria-label="Ir a Facebook" target="_blank">
+    "Nuestros clientes"
+   </a>
+  </h3>
+  <div class="color-de-fondo-comentarios-facebook">
+   <section class="section-comentarios-facebook">
+    <ul class="ul-comentarios-facebook">
+     <li class="li-comentario-facebook">
+      <h3 class="li-comentario-facebook-h3">Tami Medina</h3>
+      <p class="li-comentario-facebook-p">"Muy buena atenci&oacute;n y asesoramiento sobre todo esto. Hace un buen tiempo confiando y sigo afirmando que sabe lo que hace y cumple con lo prometido."</p>
+     </li>
+     <li class="li-comentario-facebook">
+      <h3 class="li-comentario-facebook-h3">Andy Andy</h3>
+      <p class="li-comentario-facebook-p">"Excelente trabajo. Impecable su asistencia y explicaci&oacute;n. Lo recomiendo. Es muy profesional."</p>
+     </li>
+     <li class="li-comentario-facebook">
+      <h3 class="li-comentario-facebook-h3">Maria Fernanda Yusef</h3>
+      <p class="li-comentario-facebook-p">"100% recomendable!!! R&aacute;pido, honesto y eficiente."</p>
+     </li>
+     <li class="li-comentario-facebook">
+      <h3 class="li-comentario-facebook-h3">Pedro Pitton</h3>
+      <p class="li-comentario-facebook-p">"Excelente servicio. Atenci&oacute;n en todo momento. Te das cuenta cuando alguien sabe y habla de lo que sabe."</p>
+     </li>
+     <li class="li-comentario-facebook">
+      <h3 class="li-comentario-facebook-h3">Silvia Borrello</h3>
+      <p class="li-comentario-facebook-p">"Sabe much&iacute;simo, es honesto, te explica todo el trabajo que hace. Adem&aacute;s cobra algo muy accesible y es r&aacute;pido. Super recomendable!"</p>
+     </li>
+     <li class="li-comentario-facebook">
+      <h3 class="li-comentario-facebook-h3">Norma Kuschaus</h3>
+      <p class="li-comentario-facebook-p">"Trabaja muy bien, explica muy bien a sus clientes todo el trabajo que hace y adem&aacute;s de que es 100% honesto siempre busca la soluci&oacute;n a tus problemas. Adem&aacute;s maneja buenos precios. Lo super recomiendo!"</p>
+     </li>
+     <li class="li-comentario-facebook">
+      <h3 class="li-comentario-facebook-h3">Carlos Gallelli</h3>
+      <p class="li-comentario-facebook-p">"Muy buen t&eacute;cnico de Pc y Notebooks. Muy recomendable. Explica todo lo que hace y ocurre mientras va trabajando. Adem&aacute;s ofrece asistencia remota, y la compra de insumos corre por tu cuenta, solo cobra por su mano de obra. Excelente. Soy abogado y Matías me arreglo muchos asuntos 😂😂 Dr Carlos Gallelli 👍"</p>
+     </li>
+    </ul>
+   </section>
+  </div>
+<!-- Formulario -->
+  <form class="formulario" id="formulario" novalidate aria-describedby="form-valid-msg">
+<!--  Grupo Titulo  -->
+   <div class="formulario_grupo" id="grupo_titulo">
+    <div class="formulario_grupo_titulo">
+     <h2 class="titulo black-letters">Formulario de contacto</h2>
+    </div>
+   </div>
+<!-- Grupo Nombre -->
+   <div class="formulario_grupo" id="grupo_nombre">
+    <label for="nombre" class="sr-only">Nombre</label>
+    <div class="formulario_grupo_input">
+     <i class="fas fa-user icono_input black-letters" aria-hidden="true"></i>
+     <input type="text" name="nombre" id="nombre" placeholder=" Nombre" class="formulario_input" aria-required="true" aria-describedby="error-nombre">
+    </div>
+    <p class="formulario_input_error">El nombre solo puede tener letras, espacios y debe tener un entre 1 y 30 caracteres</p>
+   </div>
+<!-- Grupo Asunto -->
+   <div class="formulario_grupo" id="grupo_asunto">
+    <label for="asunto" class="sr-only">Asunto</label>
+    <div class="formulario_grupo_input">
+     <i class="fa-solid fa-tag icono_input black-letters" aria-hidden="true"></i>
+     <input type="text" name="asunto" id="asunto" placeholder=" Asunto" class="formulario_input" aria-required="true" aria-describedby="error-asunto">
+    </div>
+    <p class="formulario_input_error">El asunto solo puede tener letras, espacios y debe tener un entre 1 y 20 caracteres</p>
+   </div>
+<!-- Grupo Correo -->
+   <div class="formulario_grupo" id="grupo_email">
+    <label for="email" class="sr-only">Correo electrónico</label>
+    <div class="formulario_grupo_input">
+     <i class="fas fa-envelope icono_input black-letters"></i>
+     <input type="email" name="email" id="email" placeholder=" Correo" class="formulario_input" aria-required="true" aria-describedby="error-email">
+    </div>
+    <p class="formulario_input_error">El correo solo puede tener letras, numeros, puntos, guiones y guion bajo</p>
+   </div>
+<!-- Grupo Mensaje -->
+   <div class="formulario_grupo" id="grupo_mensaje">
+    <label for="mensaje" class="sr-only">Mensaje</label>
+    <div class="formulario_grupo_input">
+     <i class="fas fa-edit icono_input black-letters" aria-hidden="true"></i>
+     <textarea rows="5" name="mensaje" id="mensaje" placeholder=" Mensaje..." class="formulario_input input_mensaje" aria-required="true" aria-describedby="error-mensaje"></textarea>
+    </div>
+    <p class="formulario_input_error">El mensaje debe tener por lo menos 4 caracteres y un maximo de 500 caracteres</p>
+   </div>
+<!-- Mensaje de Obligatorio -->
+   <div class="formulario_grupo" id="grupo_mensaje_obligatorio">
+    <div class="formulario_grupo_mensaje_obligatorio">
+     <p class="formulario_mensaje_obligatorio black-letters" id="formulario_mensaje_obligatorio">(*) Todos los datos son obligatorios.</p>
+    </div>
+   </div>
+<!-- Mensaje de Error -->
+   <div class="formulario_grupo" id="grupo_mensaje_error">
+    <div class="formulario_grupo_mensaje_error">
+     <p class="formulario_mensaje" id="formulario_mensaje" role="status" aria-live="polite"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+      <b> Error: </b>Por favor complete el formulario.</p>
+    </div>
+   </div>
+<!-- Grupo Mensaje Correcto y Boton -->
+   <div class="formulario_grupo" id="grupo_boton">
+    <div class="formulario_grupo_boton">
+     <button type="submit" class="formulario_btn black-letters">Enviar</button>
+    </div>
+    <p class="formulario_mensaje_correcto" id="formulario_mensaje_correcto" role="status" aria-live="polite">El formulario ha sido enviado correctamente.</p>
+   </div>
+  </form>
+<!-- Seccion de Horarios -->
+  <section class="section-horarios black-letters">
+   <div class="div-p-horarios">
+    <h3 class="h3-horarios">Horarios de atenci&oacute;n&#58;</h3>
+    <p class="p-horarios">Lunes a Viernes 9:00hs a 20:00hs<br>S&aacute;bados 9:00hs a 13:00hs</p>
+   </div>
+  </section>
+ </main>
+<!-- Redes -->
+ <div class="color-de-fondo-redes">
+  <div class="contenedor">
+   <a rel="noopener" href="https://www.facebook.com/M.C.InformaticSolutions" alt="Facebook" title="Facebook" target="_blank" class="btn" aria-label="Facebook">
+    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+   </a>
+   <a rel="noopener" href="https://wa.me/+5491165593779" alt="What's App" title="What's App" target="_blank" class="btn" aria-label="What's App">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+   </a>
+   <a rel="noopener" href="https://www.instagram.com/m.c_solutions/" alt="Instagram" title="Instagram" target="_blank" class="btn" aria-label="Instagram">
+    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+   </a>
+   <a rel="noopener" href="https://github.com/matiascatuogno" alt="Github" title="Github" target="_blank" class="btn" aria-label="Github">
+    <i class="fa-brands fa-github" aria-hidden="true"></i>
+   </a>
+   <a rel="noopener" href="https://www.linkedin.com/in/matiascatuogno/" alt="LinkedIn" title="LinkedIn" target="_blank" class="btn" aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+   </a>
+   <a rel="noopener" href="mailto:matiascatuogno@gmail.com" alt="Email" title="Email" target="_blank" class="btn" aria-label="Correo Electrónico">
+    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+   </a>
+  </div>
+<!-- Btn Flecha Arriba -->
+  <div class="flecha-arriba blackmode" id="flecha">
+   <a href="#" alt="Arriba" title="Arriba" id="flecha-a" class="flecha-arriba-a" aria-label="Ir al arriba">
+    <i class="fas fa-angle-double-up"></i>
+   </a>
+  </div>
+ </div>
+<!-- Footer -->
+ <footer class="footer-main" role="contentinfo">
+  <div class="copyright">
+   <p class="copyright-texto" id="copyright"></p>
+   <a rel="noopener" href="https://www.linkedin.com/in/matiascatuogno/" title="Desarrollo-Web" alt="Desarrollo-Web" target="_blank" class="desarrollador-web-link" aria-label="Ir a LinkedIn">Mat&iacute;as Catuogno - Desarrollo Web</a>
+  </div>
+ </footer>
+<!-- Scripts -->
+ <script src="./menubtn.js" type="text/javascript" defer></script>
+ <script src="./darkmode.js" type="text/javascript" defer></script>
+ <script src="./onscroll.js" type="text/javascript" defer></script>
+ <script src="./formulario.js" type="text/javascript" defer></script>
+ <script src="./newdate.js" type="text/javascript" defer></script>
+ <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "ProfessionalService",
+   "@id": "https://www.mc-solutions.com.ar",
+   "name": "MC-Solutions",
+   "url": "https://www.mc-solutions.com.ar",
+   "logo": "https://www.mc-solutions.com.ar/assets/icon/logo1.webp",
+   "description": "Servicio técnico especializado en reparación de computadoras, desarrollo web y soporte IT en Boulogne Sur Mer. Ofrecemos soluciones informáticas, mantenimiento de equipos y asesoramiento tecnológico.",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Boulogne Sur Mer",
+    "addressRegion": "Ciudad Autónoma de Buenos Aires",
+    "postalCode": "B1609",
+    "addressCountry": "AR"
+   },
+   "contactPoint": {
+     "@type": "ContactPoint",
+     "telephone": "+54-11-6559-3779",
+     "contactType": "customer service",
+     "areaServed": "AR",
+     "availableLanguage": ["es"]
+   },
+   "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:00",
+    "closes": "17:00"
+   },
+   "sameAs": [
+    "https://www.instagram.com/m.c_solutions/",
+    "https://www.linkedin.com/in/matiascatuogno/",
+    "https://www.facebook.com/M.C.InformaticSolutions"
+   ]
+  }
+ </script>
+</body>
+</html>

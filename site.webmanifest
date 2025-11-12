@@ -1,0 +1,22 @@
+{
+ "name": "MC-Solutions",
+ "short_name": "MC-Solutions",
+ "description": "Servicio técnico en reparación de PC, soporte y desarrollo web - Boulogne Sur Mer",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#ffa500",
+ "orientation": "portrait-primary",
+ "icons": [
+  {
+   "src": "/assets/icons/logo3.webp",
+   "sizes": "1500x800",
+   "type": "image/webp"
+  },
+  {
+   "src": "/assets/icons/logo3.webp",
+   "sizes": "1500x800",
+   "type": "image/webp"
+  }
+ ]
+}
